@@ -14,5 +14,8 @@ namespace SelectBoxAPI.Interfaces
 
         Task<bool> PostCustomerAsync(Customer customer);
 
+        public IEnumerable<Customer> GetCustomers();
+
+
     }
 }

@@ -11,5 +11,7 @@ namespace SelectBoxAPI.Interfaces
 
         Task<IEnumerable<Sector>> GetSectorsAsync();
 
+        Task<List<Sector>> GetListAsync();
+
     }
 }

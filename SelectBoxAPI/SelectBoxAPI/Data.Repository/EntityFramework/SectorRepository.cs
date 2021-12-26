@@ -15,17 +15,24 @@ namespace SelectBoxAPI.Data.Repository.EntityFramework
         }
         public async Task<string[]> GetSectorsAsyncAsStringArray()
         {
-
+            // If customerId is null, then they're the original sectors.
             return await _context.Sectors.Where(e => e.CustomerId == null).Select(e => e.SectorName).ToArrayAsync();
 
         }
 
         public async Task<IEnumerable<Sector>> GetSectorsAsync()
         {
-
+            // If customerId is null, then they're the original sectors.
             return await _context.Sectors.Where(e => e.CustomerId == null).ToListAsync();
 
         }
+
+        public Task<List<Sector>> GetListAsync()
+        {
+            // If customerId is null, then they're the original sectors.
+            return _context.Sectors.Where(e => e.CustomerId == null).ToListAsync();
+        }
+
 
     }
 }
