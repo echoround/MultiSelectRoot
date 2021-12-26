@@ -39,9 +39,6 @@ namespace SelectBoxAPI.Data.Repository.EntityFramework
             var alreadyExists = _context.Customers.Include(c => c.Sectors).Any(x => x.CustomerAuth == customer.CustomerAuth);
             _context.Entry(customer).State = alreadyExists ? EntityState.Modified : EntityState.Added;
 
-            
-            //_context.Entry(customer).State = EntityState.Added;
-
             int count = await _context.SaveChangesAsync();
 
             return count > 0;
