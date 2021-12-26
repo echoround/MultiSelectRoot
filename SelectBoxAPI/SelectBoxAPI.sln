@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelectBoxAPI", "SelectBoxAPI\SelectBoxAPI.csproj", "{50D57C04-71F9-4900-8AF9-FB65657C9991}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLazorUI", "BLazorUI\BLazorUI.csproj", "{FC2B91A8-73E7-4D22-B6EA-6CF9B97A60B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelectBoxTests", "SelectBoxTests\SelectBoxTests.csproj", "{66AECBDB-A283-4CDE-82D9-ED39542DF96D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectBoxDomain", "SelectBox\SelectBoxDomain.csproj", "{75D85DCF-8E26-4AA9-9BFD-DBD507CC1E2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50D57C04-71F9-4900-8AF9-FB65657C9991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D57C04-71F9-4900-8AF9-FB65657C9991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D57C04-71F9-4900-8AF9-FB65657C9991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D57C04-71F9-4900-8AF9-FB65657C9991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2B91A8-73E7-4D22-B6EA-6CF9B97A60B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2B91A8-73E7-4D22-B6EA-6CF9B97A60B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2B91A8-73E7-4D22-B6EA-6CF9B97A60B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2B91A8-73E7-4D22-B6EA-6CF9B97A60B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66AECBDB-A283-4CDE-82D9-ED39542DF96D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66AECBDB-A283-4CDE-82D9-ED39542DF96D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66AECBDB-A283-4CDE-82D9-ED39542DF96D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66AECBDB-A283-4CDE-82D9-ED39542DF96D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D85DCF-8E26-4AA9-9BFD-DBD507CC1E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D85DCF-8E26-4AA9-9BFD-DBD507CC1E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D85DCF-8E26-4AA9-9BFD-DBD507CC1E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D85DCF-8E26-4AA9-9BFD-DBD507CC1E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58B75FBB-93B9-439D-B3B4-0603C4341B11}
+	EndGlobalSection
+EndGlobal

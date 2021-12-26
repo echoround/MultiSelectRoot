@@ -1,0 +1,98 @@
+﻿@page "/form"
+@using System.Net.Http
+@using System.Net.Http.Json
+@using System.Threading.Tasks
+@inject HttpClient Http
+@using System.ComponentModel.DataAnnotations
+@using SelectBoxDomain.Models
+@namespace BLazorUI.Components
+
+<PageTitle></PageTitle>
+
+
+<MudContainer MaxWidth="MaxWidth.ExtraSmall">
+    <MudCard>
+        <MudCardHeader>
+            <CardHeaderContent>
+                <MudText Typo="Typo.h6">Current User:</MudText>
+            </CardHeaderContent>
+        </MudCardHeader>
+        <MudCardContent>      
+            <MudText Typo="Typo.body2"> @CustomerAuth </MudText>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Variant="Variant.Text" Color="Color.Primary" @onclick="ChangeUser">Change User</MudButton>
+        </MudCardActions>
+    </MudCard>
+</MudContainer>
+
+<br />
+
+@if (sectors == null || sectors.Length == 0 )
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    
+    <div>
+        <EditForm Model="@customer" OnValidSubmit="@PostForm">
+            <DataAnnotationsValidator />
+
+            <MudCard>
+
+                <MudCardContent>
+                    <MudTextField Label="Name" @bind-Value="customer.CustomerName" Disabled=@success For="@(() => customer.CustomerName)" />
+                             
+                <br />
+
+                <MudGrid>
+
+                    <MudItem xs="12" md="12">
+                        <MudSelect T="Sector" Label="Sectors" Disabled=@success MultiSelection="true" @bind-Value="sector" @bind-SelectedValues="customer.Sectors" 
+                        MultiSelectionTextFunc="@(new Func<List<string>, string>(GetMultiSelectionText))" @onmouseover="@OnMouseOver" @onmouseout="@OnMouseOut">
+                            
+                            @foreach (var sector in sectors)
+                            {
+                                <MudSelectItem T="Sector" Value="sector">@sector.SectorName</MudSelectItem>
+                            }
+                          
+                        </MudSelect>
+                        <ValidationMessage For="@(() => customer.Sectors)" />
+
+                    </MudItem>
+              
+                </MudGrid>
+              
+                <br />
+
+                <MudSwitch @bind-Checked="@customer.Agreed" Disabled=@success For="@(() => customer.Agreed)" Color="Color.Primary">Agree to terms: @customer.Agreed</MudSwitch>
+
+                </MudCardContent>
+
+                <br />
+                
+                <MudCardActions>
+                    @if(success == false)
+                    {
+                        <MudButton Disabled="@(success == true)" ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Register</MudButton>
+                    }
+                    else
+                    {
+                        <MudButton Disabled="@(success == false)" ButtonType="ButtonType.Button" @onclick="EditForm" Variant="Variant.Filled" Color="Color.Dark" Class="ml-auto">Edit</MudButton>
+                    }
+                </MudCardActions>
+
+                @if (success)
+                {
+                    <MudAlert Severity="Severity.Success">Form submitted.</MudAlert>
+                }
+
+            </MudCard>
+
+        
+        </EditForm>
+
+    </div>
+
+}
