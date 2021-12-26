@@ -6,7 +6,6 @@ Contents
  * [What](#what)
  * [Installation](#installation)
  * [Usage](#usage)
- * [Git Integration](#git-integration)
  * [HTML and SQL](#html-and-sql)
 
 
