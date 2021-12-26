@@ -15,7 +15,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\SelectBox\SelectBoxDomain.csproj" />
+	  <ProjectReference Include="..\SelectBoxDomain\SelectBoxDomain.csproj" />
 	</ItemGroup>
 	
 	
