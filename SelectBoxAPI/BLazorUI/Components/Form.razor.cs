@@ -1,14 +1,13 @@
 ﻿using SelectBoxDomain.Models;
 using Microsoft.AspNetCore.Components.Web;
 using System.Net.Http.Json;
-using System.Text.Json;
 
 namespace BLazorUI.Components
 {
     public partial class Form
     {
 
-        private const string _serviceEndpoint = "https://localhost:44348/api/";
+        private const string _serviceEndpoint = "https://localhost:5001/api/";
 
         private IEnumerable<string> options { get; set; } = new HashSet<string>() { };
         private string? exceptionMessage;
@@ -33,8 +32,6 @@ namespace BLazorUI.Components
 
                 customer.CustomerName = "";
 
-                string json = JsonSerializer.Serialize(customer);
-                var route = $"form/{json}";
             }
             catch (NotSupportedException exception)
             {

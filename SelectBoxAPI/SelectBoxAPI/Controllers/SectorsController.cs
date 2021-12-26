@@ -17,6 +17,7 @@ namespace SelectBoxAPI.Controllers
 
         // GET: api/Sectors
         [HttpGet]
+        [Produces("application/json")]
         public async Task<ActionResult<string[]>> GetSectors()
         {
 
