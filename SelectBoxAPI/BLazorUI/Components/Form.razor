@@ -21,7 +21,7 @@
             <MudText Typo="Typo.body2"> @CustomerAuth </MudText>
         </MudCardContent>
         <MudCardActions>
-            <MudButton Variant="Variant.Text" Color="Color.Primary" @onclick="ChangeUser">Change User</MudButton>
+            <MudButton Variant="Variant.Text" Disabled="@(success == false)" Color="Color.Primary" @onclick="ChangeUser">Change User</MudButton>
         </MudCardActions>
     </MudCard>
 </MudContainer>

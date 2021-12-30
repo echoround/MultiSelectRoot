@@ -86,11 +86,8 @@ namespace BLazorUI.Components
 
         private void ChangeUser()
         {
-            // To emulate unique user being logged in.
-            // The customer GUID (customerauth) property is to emulate user credentials and have a unique user with forms per "session".
-            // I did this to have a specific customer to get when repopulating the form for editing.
-            // Change it to add new forms from "new" customers.
             CustomerAuth = Guid.NewGuid().ToString("N")[..10];
+            StateHasChanged();
 
         }
 
