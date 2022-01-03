@@ -38,7 +38,13 @@ This project uses the [MudBlazor](https://mudblazor.com/) library. In case packa
 
 Set the solution to launch with multiple startup projects, in correct order.
 
-There should be no additional setup needed- the database will be ensure created and populated with sectors on running the program.
+Or, use these commands to launch the projects from PowerShell:
+
+`dotnet run --project .\SelectBoxAPI\SelectBoxAPI.csproj`
+`dotnet run --project .\BLazorUI\BLazorUI.csproj`
+`start chrome http://localhost:44398`
+
+There should be no additional setup needed- the database will be ensure created and populated with the list data.
 
 However, if there are any issues, it could be a mismatch of the ports of the two projects. The API endpoint is stored as the first variable in the Blazor `Form` component codebehind, as `_serviceEndpoint`.
 
