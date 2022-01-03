@@ -7,7 +7,7 @@ namespace BLazorUI.Components
     public partial class Form
     {
 
-        private const string _serviceEndpoint = "https://localhost:5001/api/";
+        private const string _serviceEndpoint = "https://localhost:44348/api/";
 
         private IEnumerable<string> options { get; set; } = new HashSet<string>() { };
         private string? exceptionMessage;
