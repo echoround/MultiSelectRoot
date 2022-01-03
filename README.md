@@ -27,7 +27,9 @@ Contents
 
 Download as `root`.
 
-Get packages.
+**Due to the Blazor UI project being .NET 6, this solution has to be run with _Visual Studio 2022_!**
+
+Get NuGet packages.
 This project uses the [MudBlazor](https://mudblazor.com/) library. In case package manager isn't able to get it automatically, it can be installed with the command: `dotnet add package MudBlazor`.
 
 
